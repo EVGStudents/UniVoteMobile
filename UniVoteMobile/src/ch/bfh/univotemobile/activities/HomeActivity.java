@@ -26,6 +26,6 @@ public class HomeActivity extends Activity {
 				Intent intent = new Intent(HomeActivity.this, WebViewActivity.class);
 				startActivity(intent);
             }
-        });
+		});
 	} 
 }
