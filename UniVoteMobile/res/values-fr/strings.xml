@@ -40,8 +40,8 @@
     </string-array>
     <string name="save_key_on_device_title">4 Enregistrer clé protégée par mot de passe sur appareil</string>
     <string name="save_key_on_device">Enregistrer clé</string>
-	
-	<string name="registration_complete">
+    
+    <string name="registration_complete">
 	    Votre clé de vote a été générée avec succès et certifiée par UniVote. 
 	    Votre clé de vote protégée par le mot de passe a été enregistré sur l\'appareil. 
 	    Vous aurez besoin de cette clé pour des élections futures dans UniVote. 
