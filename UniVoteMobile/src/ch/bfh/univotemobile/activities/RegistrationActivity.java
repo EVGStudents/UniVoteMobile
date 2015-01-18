@@ -80,7 +80,7 @@ public class RegistrationActivity extends Activity {
 				}
 			});
 	    	
-	    	// Identity Function Listener
+			// Identity Function Listener
 			spinnerIdentityFunction.setOnItemSelectedListener(new OnItemSelectedListener() {
 				@Override
 				public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
