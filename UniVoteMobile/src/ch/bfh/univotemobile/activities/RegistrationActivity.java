@@ -65,11 +65,11 @@ public class RegistrationActivity extends Activity {
 			this.jSessionId = extras.getString("JSESSIONID");
 			this.userData = new UserData(extras.getString("idp"), extras.getString("mail"), extras.getString("id"), IDENTITY_FUNCTION_DEFAULT, APPLICATION_ID, ROLE);
 		    
-		    setContentView(R.layout.activity_registration);
-		    declareGuiElements();
+			setContentView(R.layout.activity_registration);
+			declareGuiElements();
 	    	
 			// Generate Key Listener
-	    	buttonGenerateKey.setOnClickListener(new View.OnClickListener() {
+			buttonGenerateKey.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
 					RegistrationActivity.this.discreteLogSetupFactory = new DLogSetupFactory(KEY_SIZE, P, Q, G);
@@ -78,34 +78,32 @@ public class RegistrationActivity extends Activity {
 					String privateKeyBase64 = Base64.encodeToString(RegistrationActivity.this.discreteLogSetupFactory.getPrivateKey().toByteArray(), Base64.DEFAULT);
 					editTextPrivateKey.setText(privateKeyBase64);
 				}
-	        });
+			});
 	    	
 	    	// Identity Function Listener
-	    	spinnerIdentityFunction.setOnItemSelectedListener(new OnItemSelectedListener() {
-	
+			spinnerIdentityFunction.setOnItemSelectedListener(new OnItemSelectedListener() {
 				@Override
 				public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
 					// spinner entries start with 0. if we add 1, the spinner entry id's are corresponding to "real" identity function id's.
 					// see more at strings.xml
 					RegistrationActivity.this.userData.setIdentityFunction((int)id + 1); 
 				}
-	
+				
 				@Override
 				public void onNothingSelected(AdapterView<?> arg0) {}
 			});
 	    	
-	    	// Save Key on Device Listener
-	    	buttonSaveKeyOnDevice.setOnClickListener(new View.OnClickListener() {
+			// Save Key on Device Listener
+			buttonSaveKeyOnDevice.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
 					if (validateForm()) {
-						try {
-							
+						try {	
 							byte[] privateKeyBytes = RegistrationActivity.this.discreteLogSetupFactory.getPrivateKey().toByteArray(); // Private Key byte[]
 							if (privateKeyBytes[0] == 0) {
-							    byte[] tmp = new byte[privateKeyBytes.length - 1];
-							    System.arraycopy(privateKeyBytes, 1, tmp, 0, tmp.length);
-							    privateKeyBytes = tmp;
+								byte[] tmp = new byte[privateKeyBytes.length - 1];
+								System.arraycopy(privateKeyBytes, 1, tmp, 0, tmp.length);
+								privateKeyBytes = tmp;
 							}
 							// background task for generating unicert certificate and storing key on device
 							new BackgroundTask().execute(new PasswordBasedEncryptionParams(privateKeyBytes, editTextPassword1.getText().toString().getBytes()));
@@ -123,7 +121,7 @@ public class RegistrationActivity extends Activity {
 	 */
 	private boolean validateForm() {
 		Resources res = getResources();
-		if (this.editTextPrivateKey.getText().toString().equalsIgnoreCase("") ||
+		if (this.editTextPrivateKey.getText().toString().equalsIgnoreCase("") || 
 			this.editTextPassword1.getText().toString().equalsIgnoreCase("") ||
 			this.editTextPassword2.getText().toString().equalsIgnoreCase("")) {
 			Toast.makeText(this.getApplicationContext(), res.getString(R.string.all_fields_required), Toast.LENGTH_SHORT).show();
@@ -141,11 +139,11 @@ public class RegistrationActivity extends Activity {
 	
 	private void declareGuiElements() {
 		this.buttonGenerateKey = (Button) findViewById(R.id.button_generate_key);
-    	this.editTextPrivateKey = (EditText) findViewById(R.id.edit_text_private_key);
-    	this.editTextPassword1 = (EditText) findViewById(R.id.edit_text_password1);
-    	this.editTextPassword2 = (EditText) findViewById(R.id.edit_text_password2);
-    	this.spinnerIdentityFunction = (Spinner) findViewById(R.id.spinner_identity_function);
-    	this.buttonSaveKeyOnDevice = (Button) findViewById(R.id.button_save_key_on_device);
+		this.editTextPrivateKey = (EditText) findViewById(R.id.edit_text_private_key);
+		this.editTextPassword1 = (EditText) findViewById(R.id.edit_text_password1);
+		this.editTextPassword2 = (EditText) findViewById(R.id.edit_text_password2);
+		this.spinnerIdentityFunction = (Spinner) findViewById(R.id.spinner_identity_function);
+		this.buttonSaveKeyOnDevice = (Button) findViewById(R.id.button_save_key_on_device);
 	}
 	
 	/*
@@ -196,7 +194,7 @@ public class RegistrationActivity extends Activity {
 				
 				// ready for starting RegistrationCompleteActivity intent
 				Intent intent = new Intent(RegistrationActivity.this, RegistrationCompleteActivity.class);
-	        	startActivity(intent);
+				startActivity(intent);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
