@@ -6,39 +6,39 @@
     <string name="idea">Idea</string>
     <string name="idea_content">
         UniVote is an Internet voting system for elections at 
-		Swiss universities. It is the result of ongoing research 
-		activities at the Bern University of Applied Sciences. 
-		The source code and a detailed description of the system 
-		is available on the project web page.
-	</string>
-	<string name="registration">Enter registration</string>
-	<string name="registration_content">
-	    To register, you will need your ordinary SWITCHaai credentials. 
-	    UniVote uses them to verify your affiliation to a Swiss university. 
- 	</string>
-	<string name="vote">Vote Casting</string>
-	<string name="vote_content">
+        Swiss universities. It is the result of ongoing research 
+        activities at the Bern University of Applied Sciences. 
+        The source code and a detailed description of the system 
+        is available on the project web page.
+    </string>
+    <string name="registration">Enter registration</string>
+    <string name="registration_content">
+        To register, you will need your ordinary SWITCHaai credentials. 
+        UniVote uses them to verify your affiliation to a Swiss university. 
+    </string>
+    <string name="vote">Vote Casting</string>
+    <string name="vote_content">
         To cast a vote, you will need your personal voting key 
         from the registration process. The key has been stored
         on your mobile device. The voting key allows 
         UniVote to verify your eligibility without knowing your identity.
-	</string>
+    </string>
  	
-    <string name="all_fields_required">All fields required.</string>
-	<string name="passwords_not_the_same">Passwords are not identical.</string>
-	<string name="password_too_short">Password too short. Minimum character length:</string>
-    <string name="generate_key_title">1 Generate personal private key</string>
-    <string name="generate_key">Generate key</string>
-    <string name="key">Your personal private key</string>
-    <string name="protect_key_title">2 Protect private key with password</string>
-    <string name="enter_password">Enter password</string>
-    <string name="re_enter_password">Re-Enter password</string>
-    <string name="options">3 Options</string>
-    <string name="choose_identity_function">Identity processing function</string>
-    <string-array name="identity_function">
-        <item>Standard function for SwitchAAI</item> <!-- Id 1 (for server) Standard function for SwitchAAI -->
-        <item>Anonymized function for SwitchAAI</item> <!-- Id 2 (for server) Anonymized function for SwitchAAI -->
-        <item>Zurich function for SwitchAAI</item> <!-- Id 3 (for server) Zurich function for SwitchAAI -->
+ 	<string name="all_fields_required">All fields required.</string>
+ 	<string name="passwords_not_the_same">Passwords are not identical.</string>
+ 	<string name="password_too_short">Password too short. Minimum character length:</string>
+ 	<string name="generate_key_title">1 Generate personal private key</string>
+ 	<string name="generate_key">Generate key</string>
+ 	<string name="key">Your personal private key</string>
+ 	<string name="protect_key_title">2 Protect private key with password</string>
+ 	<string name="enter_password">Enter password</string>
+ 	<string name="re_enter_password">Re-Enter password</string>
+ 	<string name="options">3 Options</string>
+ 	<string name="choose_identity_function">Identity processing function</string>
+ 	<string-array name="identity_function">
+ 	    <item>Standard function for SwitchAAI</item> <!-- Id 1 (for server) Standard function for SwitchAAI -->
+ 	    <item>Anonymized function for SwitchAAI</item> <!-- Id 2 (for server) Anonymized function for SwitchAAI -->
+ 	    <item>Zurich function for SwitchAAI</item> <!-- Id 3 (for server) Zurich function for SwitchAAI -->
     </string-array>
     <string name="save_key_on_device_title">4 Save password-protected private key to device</string>
     <string name="save_key_on_device">Save key</string>
@@ -47,6 +47,6 @@
         Your personal voting key was successfully generated and certified by UniVote. 
         Your password-protected voting key has been saved to your mobile device.
         You will use this key for upcoming elections. The certificate of your voting key is stored by UniVote.
-	</string>
-	<string name="go_home">Back to home</string>
+    </string>
+    <string name="go_home">Back to home</string>
 </resources>
