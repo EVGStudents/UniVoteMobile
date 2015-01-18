@@ -27,39 +27,41 @@ public class WebViewActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_web_view);
-
+		
 		// network exception handling
 		this.trustEveryone();
 		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		StrictMode.setThreadPolicy(policy); 
 		
 		WebView webViewAuthentication = (WebView) findViewById(R.id.web_view_authentication);
-    	webViewAuthentication.getSettings().setJavaScriptEnabled(true);
-    	// registration activity starts is defined in MyWebViewClient
-    	webViewAuthentication.setWebViewClient(new UnicertWebViewClient(this));
-    	webViewAuthentication.loadUrl(AUTHENTICATION_URL);
+		webViewAuthentication.getSettings().setJavaScriptEnabled(true);
+		
+		// registration activity starts is defined in MyWebViewClient
+		webViewAuthentication.setWebViewClient(new UnicertWebViewClient(this));
+		webViewAuthentication.loadUrl(AUTHENTICATION_URL);
 	}
 	
 	// needed because of not trusted ssl certificate
-    private void trustEveryone() {
-    	try {
-    		HttpsURLConnection.setDefaultHostnameVerifier(new HostnameVerifier(){
-        			public boolean verify(String hostname, SSLSession session) {
-        				return true;
-        			}});
-    		SSLContext context = SSLContext.getInstance("TLS");
-    		context.init(null, new X509TrustManager[]{new X509TrustManager(){
-    			public void checkClientTrusted(X509Certificate[] chain,
-    					String authType) throws CertificateException {}
-    			public void checkServerTrusted(X509Certificate[] chain,
-    					String authType) throws CertificateException {}
-    			public X509Certificate[] getAcceptedIssuers() {
-    				return new X509Certificate[0];
-    			}}}, new SecureRandom());
-    		HttpsURLConnection.setDefaultSSLSocketFactory(
-    				context.getSocketFactory());
-    	} catch (Exception e) {
-    		e.printStackTrace();
+	private void trustEveryone() {
+		try {
+			HttpsURLConnection.setDefaultHostnameVerifier(new HostnameVerifier(){
+				public boolean verify(String hostname, SSLSession session) {
+					return true;
+				}
+			});
+			SSLContext context = SSLContext.getInstance("TLS");
+			context.init(null, new X509TrustManager[]{new X509TrustManager(){
+				public void checkClientTrusted(X509Certificate[] chain,
+						String authType) throws CertificateException {}
+				public void checkServerTrusted(X509Certificate[] chain,
+						String authType) throws CertificateException {}
+				public X509Certificate[] getAcceptedIssuers() {
+					return new X509Certificate[0];
+    			}
+			}}, new SecureRandom());
+			HttpsURLConnection.setDefaultSSLSocketFactory(context.getSocketFactory());
+		} catch (Exception e) {
+			e.printStackTrace();
     	}
     }
 }
