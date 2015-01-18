@@ -41,9 +41,9 @@ public class UnicertWebViewClient extends WebViewClient {
         	intent.putExtra("idp", myUrl.getQueryParameter("idp"));
         	intent.putExtra("mail", myUrl.getQueryParameter("mail"));
         	intent.putExtra("id", myUrl.getQueryParameter("id"));
-            this.context.startActivity(intent);
-            return true;
-        }
+        	this.context.startActivity(intent);
+        	return true;
+    	}
         return super.shouldOverrideUrlLoading(view, url);
     }    
 }
