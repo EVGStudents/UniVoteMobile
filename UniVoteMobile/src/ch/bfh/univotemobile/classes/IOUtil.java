@@ -34,14 +34,14 @@ public class IOUtil {
 	 * @return The content of the file as String.
 	 * @throws IOException
 	 */
-    public static String readFile(String filename, Context context) throws IOException {
-    	FileInputStream fin = context.openFileInput(filename);
-    	int c;
-    	String temp="";
-    	while( (c = fin.read()) != -1){
-    	   temp = temp + Character.toString((char)c);
-    	}
-    	fin.close();
-    	return temp;
-    }
+	public static String readFile(String filename, Context context) throws IOException {
+		FileInputStream fin = context.openFileInput(filename);
+		int c;
+		String temp="";
+		while( (c = fin.read()) != -1){
+			temp = temp + Character.toString((char)c);
+		}
+		fin.close();
+		return temp;
+	}
 }
