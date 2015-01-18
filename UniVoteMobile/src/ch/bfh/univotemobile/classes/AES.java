@@ -23,8 +23,8 @@ public class AES {
 	public static byte[] encrypt(byte[] message, byte[] password) throws Exception {
 		Cipher c = Cipher.getInstance(ALGORITHM);
 		SecretKey k = new SecretKeySpec(AES.makeKey(password), ALGORITHM);
-        c.init(Cipher.ENCRYPT_MODE, k);
-        return c.doFinal(message);
+		c.init(Cipher.ENCRYPT_MODE, k);
+		return c.doFinal(message);
 	}
 	
 	/**

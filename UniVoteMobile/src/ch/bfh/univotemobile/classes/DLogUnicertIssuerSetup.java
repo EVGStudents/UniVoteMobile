@@ -11,30 +11,12 @@ import java.net.URLEncoder;
 
 public class DLogUnicertIssuerSetup implements CryptographicUnicertIssuerSetup {
 
-    /**
-     * Size of the keys
-     */ 
     private final int size;
-    
-    /**
-     * Cyclic modular group
-     */
     private final GStarModPrime G_q;
-    
-    /**
-     * The modular additive group of order q
-     */
     private final ZMod Z_q;
-    /**
-     * Generator of the cyclic group
-     */
     private final GStarModElement generator;
-    /**
-     * Safe prime
-     */
     private final Prime p;
     private final Prime q;
-    
     private final GStarModElement publicKey;
     private final BigInteger proofCommitment;
     private final BigInteger proofResponse;
@@ -73,80 +55,80 @@ public class DLogUnicertIssuerSetup implements CryptographicUnicertIssuerSetup {
      * @return the size of the keys
      */
     public int getSize() {
-        return size;
-    }
+    	return size;
+	}
 
     /**
      * Get the modular cyclic group
      * @return the modular cyclic group
      */
     public GStarModPrime getG_q() {
-        return G_q;
-    }
+    	return G_q;
+	}
 
     /**
      * Get the modular additive group of order q
      * @return the modular additive group of order q
      */
     public ZMod getZ_q() {
-        return Z_q;
-    }
+    	return Z_q;
+	}
 
     /**
      * Get the generator of the cyclic group
      * @return the generator of the cyclic group
      */
     public GStarModElement getGenerator() {
-        return generator;
-    }
+    	return generator;
+	}
     
     /**
      * Get the safe prime
      * @return the safe prime
      */
     public Prime getP() {
-        return p;
-    }
+    	return p;
+	}
 
     /**
      * Get the public key
      * @return the public key
      */
     public GStarModElement getPublicKey() {
-        return publicKey;
-    }
+    	return publicKey;
+	}
 
     /**
      * Get the commitment part of the proof of knowledge of the secret key
      * @return the commitment part of the proof
      */
     public BigInteger getProofCommitment() {
-        return proofCommitment;
-    }
+    	return proofCommitment;
+	}
     
     /**
      * Get the challenge part of the proof of knowledge of the secret key
      * @return the challenge part of the proof
      */
     public BigInteger getProofChallenge() {
-        return proofChallenge;
-    }
+    	return proofChallenge;
+	}
     
     /**
      * Get the response part of the proof of knowledge of the secret key
      * @return the response part of the proof
      */
     public BigInteger getProofResponse() {
-        return proofResponse;
-    }
+    	return proofResponse;
+	}
     
     /**
      * Get the string containing other values that were linked in the proof
      * @return the string of values included in the proof
      */
     public String getProofOtherInput() {
-        return proofOtherInput;
-    }
+    	return proofOtherInput;
+	}
 
     /**
      * Set the string containing other values that were linked in the proof
@@ -154,18 +136,18 @@ public class DLogUnicertIssuerSetup implements CryptographicUnicertIssuerSetup {
      */
     @Override
     public void setSignatureOtherInput(String proofPublicInput) {
-        this.proofOtherInput = proofPublicInput;
-    }
-
-	public Prime getQ() {
-		return q;
+    	this.proofOtherInput = proofPublicInput;
+	}
+    
+    public Prime getQ() {
+    	return q;
 	}
 
-	@Override
-	public String getBody(UserData userData) {
-		String body = null;
-		try {
-			body = "crypto_setup_type=" + URLEncoder.encode( "DiscreteLog", "UTF-8" ) + "&" +
+    @Override
+    public String getBody(UserData userData) {
+    	String body = null;
+    	try {
+    		body = "crypto_setup_type=" + URLEncoder.encode( "DiscreteLog", "UTF-8" ) + "&" +
 			"crypto_setup_size=" + URLEncoder.encode( Integer.toString(this.getSize()), "UTF-8" ) + "&" + 
 			"dlog_p=" + URLEncoder.encode( this.getP().getValue().toString(), "UTF-8" ) + "&" + 
 			"dlog_q=" + URLEncoder.encode( this.getQ().getValue().toString(), "UTF-8" ) + "&" + 

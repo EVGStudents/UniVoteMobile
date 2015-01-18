@@ -75,10 +75,10 @@ public class DLogSetupFactory {
 		
 		StringElement message = StringMonoid.getInstance(Alphabet.UNICODE_BMP).getElement(originalMessage);
 		Function func = GeneratorFunction.getInstance(this.generatorElement);
-        HashMethod hashMethod = HashMethod.getInstance(HashAlgorithm.SHA256, ConvertMethod.getInstance(
-			    BigIntegerToByteArray.getInstance(ByteOrder.BIG_ENDIAN), StringToByteArray.getInstance(Charset.forName("UTF-8"))), HashMethod.Mode.RECURSIVE);
-        FiniteByteArrayToBigInteger byteArrayConverter = FiniteByteArrayToBigInteger.getInstance(HashAlgorithm.SHA256.getHashLength());
-        FiatShamirSigmaChallengeGenerator scg = FiatShamirSigmaChallengeGenerator.getInstance(G_q, G_q, Z_q, message, hashMethod, byteArrayConverter);
+		HashMethod hashMethod = HashMethod.getInstance(HashAlgorithm.SHA256, 
+				ConvertMethod.getInstance(BigIntegerToByteArray.getInstance(ByteOrder.BIG_ENDIAN), StringToByteArray.getInstance(Charset.forName("UTF-8"))), HashMethod.Mode.RECURSIVE);
+		FiniteByteArrayToBigInteger byteArrayConverter = FiniteByteArrayToBigInteger.getInstance(HashAlgorithm.SHA256.getHashLength());
+		FiatShamirSigmaChallengeGenerator scg = FiatShamirSigmaChallengeGenerator.getInstance(G_q, G_q, Z_q, message, hashMethod, byteArrayConverter);
 		PreimageProofSystem pips = PreimageProofSystem.getInstance(scg, func);
 		
 		Triple proof = pips.generate(this.privateKeyElement, this.publicKeyElement);

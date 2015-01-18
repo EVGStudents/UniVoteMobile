@@ -62,6 +62,6 @@ public class WebViewActivity extends Activity {
 			HttpsURLConnection.setDefaultSSLSocketFactory(context.getSocketFactory());
 		} catch (Exception e) {
 			e.printStackTrace();
-    	}
-    }
+		}
+	}
 }
