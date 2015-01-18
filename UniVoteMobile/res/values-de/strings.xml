@@ -6,33 +6,34 @@
     <string name="idea">Idee</string>
     <string name="idea_content">        
         UniVote ist ein Internet-Wahlsystem
-		für die Durchführung von
-		Wahlen an Schweizer Hochschulen.
-		Das System ist das Resultat
-		einer mehrjährigen Forschungstätigkeit
-		an der Berner Fachhochschule.
-		Der gesamte Quelltext
-		und eine detaillierte Beschreibung
-		des Systems sind auf der
-		Projektseite zugänglich.	</string>
+        für die Durchführung von
+        Wahlen an Schweizer Hochschulen.
+        Das System ist das Resultat
+        einer mehrjährigen Forschungstätigkeit
+        an der Berner Fachhochschule. Der gesamte Quelltext
+        und eine detaillierte Beschreibung
+        des Systems sind auf der
+        Projektseite zugänglich.
+    </string>
     <string name="registration">Registrierung</string>
     <string name="registration_content">
         Für die einmalige Registrierung
-		benötigen Sie die gewöhnlichen
-		SWITCHaai-Zugangsdaten Ihrer
-		Hochschule. Damit authentisieren
-		Sie sich gegenüber UniVote als
-		Angehörige oder Angehöriger
-		einer Schweizer Hochschule.	</string>
+        benötigen Sie die gewöhnlichen
+        SWITCHaai-Zugangsdaten Ihrer
+        Hochschule. Damit authentisieren
+        Sie sich gegenüber UniVote als
+        Angehörige oder Angehöriger
+        einer Schweizer Hochschule.
+    </string>
     <string name="vote">Stimmabgabe</string>
     <string name="vote_content">
         Für die Stimmabgabe benötigen
-		Sie den persönlichen Wahlschlüssel,
-		den Sie am Ende der Registrierung
-		auf Ihrem Gerät ablegen.
-		Damit kann UniVote Ihre Wahlberechtigung
-		prüfen, ohne auf Ihre
-		Identität schliessen zu können.	</string>
+        Sie den persönlichen Wahlschlüssel,
+        den Sie am Ende der Registrierung
+        auf Ihrem Gerät ablegen.
+        Damit kann UniVote Ihre Wahlberechtigung
+        prüfen, ohne auf Ihre Identität schliessen zu können.
+    </string>
     
     <string name="all_fields_required">Alle Felder benötigt.</string>
     <string name="passwords_not_the_same">Passwörter sind nicht identisch.</string>
@@ -54,11 +55,10 @@
     <string name="save_key_on_device">Wahlschlüssel ablegen</string>
     
     <string name="registration_complete">
-        Ihr persönlicher Wahlschlüssel wurde erfolgreich erzeugt und von 
+        Ihr persönlicher Wahlschlüssel wurde erfolgreich erzeugt und von
         UniVote zertifiziert. Der passwortgeschütze Wahlschlüssel wurde auf ihrem
-        Gerät abgelegt. Diesen Schlüssel werden Sie für zukünftige Wahlen mit UniVote 
+        Gerät abgelegt. Diesen Schlüssel werden Sie für zukünftige Wahlen mit UniVote
         benötigen. Das Zertifikat Ihres Wahlschlüssel wird von UniVote verwaltet.
-	</string>
-	<string name="go_home">Zurück zur Startseite</string>
-    
+    </string>
+    <string name="go_home">Zurück zur Startseite</string>
 </resources>
