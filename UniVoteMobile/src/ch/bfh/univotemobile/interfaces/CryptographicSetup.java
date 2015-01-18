@@ -17,7 +17,7 @@ package ch.bfh.univotemobile.interfaces;
  * @author Philémon von Bergen &lt;philemon.vonbergen@bfh.ch&gt;
  */
 public interface CryptographicSetup {
+	
+	public void setSignatureOtherInput(String otherInput);
 
-    public void setSignatureOtherInput(String otherInput);
-    
 }

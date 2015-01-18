@@ -7,6 +7,7 @@ import ch.bfh.univotemobile.classes.UserData;
  * @author Raphael Hänni
  */
 public interface CryptographicUnicertIssuerSetup extends CryptographicSetup {
-
+	
 	public String getBody(UserData userData);
+	
 }
