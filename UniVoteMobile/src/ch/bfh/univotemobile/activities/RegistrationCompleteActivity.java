@@ -25,7 +25,7 @@ public class RegistrationCompleteActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(RegistrationCompleteActivity.this, HomeActivity.class);
-            	startActivity(intent);
+				startActivity(intent);
 			}
 		});
 	}
