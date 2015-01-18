@@ -8,23 +8,23 @@
         de recherche à la Haute Ecole Spécialisée Bernoise. 
         L\'ensemble du code source et une description détaillée 
         du système sont disponibles sur la page du projet.
-	</string>
-	<string name="registration">Enregistrement</string>
-	<string name="registration_content">
-	    Pour l\'enregistrement unique, vous avez besoin de vos données 
-	    d\'accès SWITCHaai fournies par votre Haute Ecole. 
-	    Ceci permet de vous authentifier en tant que membre d\'une Haute Ecole suisse.
-	</string>
-	<string name="vote">Vote</string>
-	<string name="vote_content">
-	    Pour le vote, vous avez besoin de votre clé de vote personnelle stocké sur le téléphone mobile
-	    à la fin de la phase d\'enregistrement. Ainsi, UniVote peut vérifier si vous avez 
-	    le droit de voter, sans pouvoir retrouver votre identité.
-	</string>
+    </string>
+    <string name="registration">Enregistrement</string>
+    <string name="registration_content">
+        Pour l\'enregistrement unique, vous avez besoin de vos données 
+        d\'accès SWITCHaai fournies par votre Haute Ecole. 
+        Ceci permet de vous authentifier en tant que membre d\'une Haute Ecole suisse.
+    </string>
+    <string name="vote">Vote</string>
+    <string name="vote_content">
+        Pour le vote, vous avez besoin de votre clé de vote personnelle stocké sur le téléphone mobile
+        à la fin de la phase d\'enregistrement. Ainsi, UniVote peut vérifier si vous avez 
+        le droit de voter, sans pouvoir retrouver votre identité.
+    </string>
     
     <string name="all_fields_required">Tous les champs sont obligatoires.</string>
-	<string name="passwords_not_the_same">Les mots de passe ne correspondent pas.</string>
-	<string name="password_too_short">Mot de passe trop court. Nombre de caractères requis:</string> 
+    <string name="passwords_not_the_same">Les mots de passe ne correspondent pas.</string>
+    <string name="password_too_short">Mot de passe trop court. Nombre de caractères requis:</string> 
     <string name="generate_key_title">1 Générer clé privée personnelle</string>
     <string name="generate_key">Générer la clé</string>
     <string name="key">Votre clé de sélection</string>
@@ -42,10 +42,10 @@
     <string name="save_key_on_device">Enregistrer clé</string>
 	
 	<string name="registration_complete">
-        Votre clé de vote a été générée avec succès et certifiée par UniVote. 
-        Votre clé de vote protégée par le mot de passe a été enregistré sur l\'appareil. 
-        Vous aurez besoin de cette clé pour des élections futures dans UniVote. 
-        Le certificat de votre clé de vote est géré par UniVote.
-	</string>
-	<string name="go_home">Retour à page d\'accueil </string>
+	    Votre clé de vote a été générée avec succès et certifiée par UniVote. 
+	    Votre clé de vote protégée par le mot de passe a été enregistré sur l\'appareil. 
+	    Vous aurez besoin de cette clé pour des élections futures dans UniVote. 
+	    Le certificat de votre clé de vote est géré par UniVote.
+    </string>
+    <string name="go_home">Retour à page d\'accueil </string>
 </resources>
