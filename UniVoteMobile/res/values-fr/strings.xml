@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="idea">Idée</string>
+    <string name="idea_content">
+        UniVote est un système de vote par internet pour 
+        la réalisation d\'élections dans les Hautes Ecoles Suisses. 
+        Ce système est le résultat de plusieurs années d\'activités 
+        de recherche à la Haute Ecole Spécialisée Bernoise. 
+        L\'ensemble du code source et une description détaillée 
+        du système sont disponibles sur la page du projet.
+	</string>
+	<string name="registration">Enregistrement</string>
+	<string name="registration_content">
+	    Pour l\'enregistrement unique, vous avez besoin de vos données 
+	    d\'accès SWITCHaai fournies par votre Haute Ecole. 
+	    Ceci permet de vous authentifier en tant que membre d\'une Haute Ecole suisse.
+	</string>
+	<string name="vote">Vote</string>
+	<string name="vote_content">
+	    Pour le vote, vous avez besoin de votre clé de vote personnelle stocké sur le téléphone mobile
+	    à la fin de la phase d\'enregistrement. Ainsi, UniVote peut vérifier si vous avez 
+	    le droit de voter, sans pouvoir retrouver votre identité.
+	</string>
+    
+    <string name="all_fields_required">Tous les champs sont obligatoires.</string>
+	<string name="passwords_not_the_same">Les mots de passe ne correspondent pas.</string>
+	<string name="password_too_short">Mot de passe trop court. Nombre de caractères requis:</string> 
+    <string name="generate_key_title">1 Générer clé privée personnelle</string>
+    <string name="generate_key">Générer la clé</string>
+    <string name="key">Votre clé de sélection</string>
+    <string name="protect_key_title">2 Protéger clé privée avec mot de passe</string>
+    <string name="enter_password">Entrez mot de passe</string>
+    <string name="re_enter_password">Entrez à nouveau mot de passe</string>
+    <string name="options">3 Options</string>
+    <string name="choose_identity_function">Fonction identité</string>
+    <string-array name="identity_function">
+        <item>Fonction standard pour SwitchAAI</item> <!-- Id 1 (for server) Standard function for SwitchAAI -->
+        <item>Function anonyme pour SwitchAAI</item> <!-- Id 2 (for server) Anonymized function for SwitchAAI -->
+        <item>Function zurich pour SwitchAAI</item> <!-- Id 3 (for server) Zurich function for SwitchAAI -->
+    </string-array>
+    <string name="save_key_on_device_title">4 Enregistrer clé protégée par mot de passe sur appareil</string>
+    <string name="save_key_on_device">Enregistrer clé</string>
+	
+	<string name="registration_complete">
+        Votre clé de vote a été générée avec succès et certifiée par UniVote. 
+        Votre clé de vote protégée par le mot de passe a été enregistré sur l\'appareil. 
+        Vous aurez besoin de cette clé pour des élections futures dans UniVote. 
+        Le certificat de votre clé de vote est géré par UniVote.
+	</string>
+	<string name="go_home">Retour à page d\'accueil </string>
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UniVote</string>
+    <string name="blank"></string>
+    
+    <string name="idea">Idee</string>
+    <string name="idea_content">        
+        UniVote ist ein Internet-Wahlsystem
+		für die Durchführung von
+		Wahlen an Schweizer Hochschulen.
+		Das System ist das Resultat
+		einer mehrjährigen Forschungstätigkeit
+		an der Berner Fachhochschule.
+		Der gesamte Quelltext
+		und eine detaillierte Beschreibung
+		des Systems sind auf der
+		Projektseite zugänglich.	</string>
+    <string name="registration">Registrierung</string>
+    <string name="registration_content">
+        Für die einmalige Registrierung
+		benötigen Sie die gewöhnlichen
+		SWITCHaai-Zugangsdaten Ihrer
+		Hochschule. Damit authentisieren
+		Sie sich gegenüber UniVote als
+		Angehörige oder Angehöriger
+		einer Schweizer Hochschule.	</string>
+    <string name="vote">Stimmabgabe</string>
+    <string name="vote_content">
+        Für die Stimmabgabe benötigen
+		Sie den persönlichen Wahlschlüssel,
+		den Sie am Ende der Registrierung
+		auf Ihrem Gerät ablegen.
+		Damit kann UniVote Ihre Wahlberechtigung
+		prüfen, ohne auf Ihre
+		Identität schliessen zu können.	</string>
+    
+    <string name="all_fields_required">Alle Felder benötigt.</string>
+    <string name="passwords_not_the_same">Passwörter sind nicht identisch.</string>
+    <string name="password_too_short">Passwort zu kurz. Anzahl benötigter Zeichen:</string>
+    <string name="generate_key_title">1 Erzeugung des persönlichen Wahlschlüssels</string>
+    <string name="generate_key">Schlüssel erzeugen</string>
+    <string name="key">Ihr persönlicher Wahlschlüssel</string>
+    <string name="protect_key_title">2 Wahlschlüssel mittels Passwort schützen</string>
+    <string name="enter_password">Passwort eingeben</string>
+    <string name="re_enter_password">Passwort wiederholen</string>
+    <string name="options">3 Optionen</string>
+    <string name="choose_identity_function">Identitäts Funktion</string>
+    <string-array name="identity_function">
+        <item>Standard Funktion für SwitchAAI</item>  <!-- Id 1 (for server) Standard function for SwitchAAI -->
+        <item>Anonymisierte Funktion für SwitchAAI</item> <!-- Id 2 (for server) Anonymized function for SwitchAAI -->
+        <item>Zürich Funktion für SwitchAAI</item> <!-- Id 3 (for server) Zurich function for SwitchAAI -->
+    </string-array>
+    <string name="save_key_on_device_title">4 Passwortgeschützter Wahlschlüssel auf Gerät ablegen</string>
+    <string name="save_key_on_device">Wahlschlüssel ablegen</string>
+    
+    <string name="registration_complete">
+        Ihr persönlicher Wahlschlüssel wurde erfolgreich erzeugt und von 
+        UniVote zertifiziert. Der passwortgeschütze Wahlschlüssel wurde auf ihrem
+        Gerät abgelegt. Diesen Schlüssel werden Sie für zukünftige Wahlen mit UniVote 
+        benötigen. Das Zertifikat Ihres Wahlschlüssel wird von UniVote verwaltet.
+	</string>
+	<string name="go_home">Zurück zur Startseite</string>
+    
+</resources>
