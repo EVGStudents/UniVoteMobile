@@ -21,10 +21,10 @@ public class HomeActivity extends Activity {
 		getActionBar().setTitle(R.string.blank);
 		
 		final Button button = (Button) findViewById(R.id.button_registration);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-            	Intent intent = new Intent(HomeActivity.this, WebViewActivity.class);
-            	startActivity(intent);
+		button.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				Intent intent = new Intent(HomeActivity.this, WebViewActivity.class);
+				startActivity(intent);
             }
         });
 	}
